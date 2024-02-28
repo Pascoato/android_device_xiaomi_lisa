@@ -1311,6 +1311,10 @@ vendor/firmware/goodix_gt9897t_cfg_k9d_csot.bin
 vendor/firmware/goodix_gt9897t_fw_k9d.bin
 vendor/firmware/goodix_gt9897t_fw_k9d_csot.bin
 
+# USB
+vendor/bin/init.qcom.usb.sh
+vendor/etc/init/hw/init.qcom.usb.rc
+
 # Vibrator firmware
 vendor/firmware/aw8624_haptic.bin
 vendor/firmware/aw8624_rtp.bin
