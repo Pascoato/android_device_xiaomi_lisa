@@ -1,4 +1,4 @@
 runtime_resource_overlay {
     name: "LisaGLSettingsProviderOverlay",
-    product_specific: true
+    vendor: true
 }
