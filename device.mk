@@ -235,11 +235,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
     $(LOCAL_PATH)/configs/keylayout/lahaina-yupikqrd-snd-card_Button_Jack.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/lahaina-yupikqrd-snd-card_Button_Jack.kl
 
-# Media
-PRODUCT_PACKAGES += \
-    libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor
-
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
@@ -324,9 +319,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 30
-
-# Shim for Dolby codec
-PRODUCT_PACKAGES += libshim
 
 # Thermal
 PRODUCT_VENDOR_PROPERTIES += \

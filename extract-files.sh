@@ -55,20 +55,8 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/bin/hw/dolbycodec2)
-            patchelf --replace-needed libavservices_minijail_vendor.so libavservices_minijail.so "${2}"
-            patchelf --replace-needed libcodec2_hidl@1.0.so libcodec2_hidl@1.0.stock.so "${2}"
-            patchelf --add-needed "libshim.so" "${2}"
-            ;;
         vendor/etc/camera/pure*_parameter.xml)
             sed -i "s/=\([0-9]\+\)>/=\"\1\">/g" "${2}"
-            ;;
-        vendor/lib/libcodec2_hidl@1.0.stock.so)
-            patchelf --set-soname libcodec2_hidl@1.0.stock.so "${2}"
-            patchelf --replace-needed libcodec2_vndk.so libcodec2_vndk.stock.so "${2}"
-            ;;
-        vendor/lib/libcodec2_vndk.stock.so)
-            patchelf --set-soname libcodec2_vndk.stock.so "${2}"
             ;;
         vendor/lib64/hw/camera.xiaomi.so)
             # Before
